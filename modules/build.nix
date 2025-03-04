@@ -135,6 +135,7 @@ in {
             echo "switching manifests"
 
             ${pkgs.rsync}/bin/rsync --recursive --delete -L "${config.build.environmentPackage}/" "\$dest"
+            chmod -R +w "\$dest"
 
             echo "done!"
           else
