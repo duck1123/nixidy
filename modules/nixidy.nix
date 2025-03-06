@@ -8,6 +8,7 @@ let
 
   mkApplication = app: {
     metadata = {
+      inherit (app) finalizers;
       name =
         if (cfg.appendNameWithEnv && cfg.appOfApps.name != app.name) then
           "${app.name}-${cfg.env}"
