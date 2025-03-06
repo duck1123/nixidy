@@ -96,6 +96,11 @@ in {
       default = false;
       description = "Whether or not a namespace resource should be automatically created.";
     };
+    finalizers = mkOption {
+      type = types.listOf types.str;
+      default = [];
+      description = "Finalizers applied to generated app";
+    };
     project = mkOption {
       type = types.str;
       default = "default";

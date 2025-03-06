@@ -190,7 +190,7 @@ in {
 
               value = {
                 metadata = {
-                  inherit (app) name;
+                  inherit (app) finalizers name;
                   annotations =
                     if app.annotations != {}
                     then app.annotations
